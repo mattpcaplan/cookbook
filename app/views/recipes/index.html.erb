@@ -1,0 +1,7 @@
+<% @recipes.each do |recipe| %>
+  <%= recipe.calories %> calories
+  Feeds <%= recipe.people_fed %>
+  <%= recipe.cook_time %> minutes to cook
+  <%= recipe.course %>
+  <br />
+<% end %>
