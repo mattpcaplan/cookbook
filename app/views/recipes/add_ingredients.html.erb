@@ -1,13 +1,5 @@
 <h1>Add Ingredients to <%= @recipe.name %></h1>
-
-<%= form_tag do |f| %>
-
-<% Ingredient.all.each do |i| %>
-<br>
-<%= check_box_tag 'ingredients[]', i.id %>
-<%= label_tag i.name %>
-<% end %>
-
+<%= simple_form_for @recipe do |f| %>
+<%= f.association :ingredients, as: :select, allow_blank: true %>
 <%= submit_tag 'Add Ingredients' %>
-
 <% end %>

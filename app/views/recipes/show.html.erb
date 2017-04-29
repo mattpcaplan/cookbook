@@ -3,6 +3,7 @@
 <h2>Ingredients</h1>
 
   <table class='table'>
+    Number of Ingredients: <%= @recipe.ingredients.count %>
     <% @recipe.ingredients.each do |i| %>
     <tr>
       <td><%= i.quantity(@recipe) %></td>
