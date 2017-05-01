@@ -6,7 +6,7 @@
     Number of Ingredients: <%= @recipe.ingredients.count %>
     <% @recipe.ingredients.each do |i| %>
     <tr>
-      <td><%= i.quantity(@recipe) %></td>
+      <td><%= i.quantity(@recipe) %></td> <%# just unsure why this wont show %>
       <td><%= link_to i.name, ingredient_path(i.id) %></td>
     </tr>
     <% end %>

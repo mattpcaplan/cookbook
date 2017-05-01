@@ -3,7 +3,7 @@
 <%= f.input :name %>
 <%= f.input :calories %>
 <%= f.input :people_fed, label: 'How many people will this feed?' %>
-<%= f.input :cook_time, label: 'Time to Cook' %>
+<%= f.input :cook_time, label: 'Time to Cook(in minutes)' %>
 <%= f.input :course, collection: ['Breakfast', 'Lunch', 'Dinner', 'Dessert'] %>
 <%= f.submit 'Add Ingredients' %>
 <% end %>
