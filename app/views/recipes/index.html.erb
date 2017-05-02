@@ -1,12 +1,14 @@
+<h1> List of Current Recipes:</h1>
+<br>
 <% @recipes.each do |recipe| %>
-  <%= recipe.name %>
-  <%= recipe.calories %> calories
-  Feeds <%= recipe.people_fed %>
-  <%= recipe.cook_time %> minutes to cook
+  <%= recipe.name %>,
+  <%= recipe.calories %> calories,
+  Feeds <%= recipe.people_fed %>,
+  <%= recipe.cook_time %> minutes to cook,
   <%= recipe.course %>
   <br />
 <% end %>
 
-<%= link_to 'Ingredients', ingredients_path %>
-<%= link_to 'New Ingredient', new_ingredient_path %>
+<%= link_to 'Ingredients', ingredients_path %> |
+<%= link_to 'New Ingredient', new_ingredient_path %> |
 <%= link_to 'New Recipe', new_recipe_path %>

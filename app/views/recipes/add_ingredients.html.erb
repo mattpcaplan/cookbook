@@ -1,5 +1,15 @@
-<h1>Add Ingredients to <%= @recipe.name %></h1>
+<!-- <h1>Add Ingredients to <%= @recipe.name %></h1>
+<div id="ingredients_table">
 <%= simple_form_for @recipe do |f| %>
 <%= f.association :ingredients, as: :select, allow_blank: true %>
-<%= submit_tag 'Add Ingredients' %>
-<% end %>
+</div>
+<%= submit_tag 'Select this Ingredient'%>
+<%= submit_tag 'Add Ingredients Not Listed' %>
+<% end %> -->
+
+<h1>Add Ingredients to <%= @recipe.name %></h1>
+<%= simple_form_for (@recipe) do |f| %>
+<%= f.association :ingredients, as: :select, allow_blank: true, :class=>"x" %>
+  <%= submit_tag 'Select this Ingredient', name: 'select'%>
+  <%= submit_tag 'Add Ingredients Not Listed', name: 'add' %>
+  <% end %>
